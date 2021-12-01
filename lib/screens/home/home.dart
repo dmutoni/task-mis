@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_mis_app/screens/home/widgets/go_premium.dart';
+import 'package:task_mis_app/screens/home/widgets/tasks.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,7 +13,18 @@ class HomePage extends StatelessWidget {
       appBar: _buildAppBar(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [GoPremium()],
+        children: [const GoPremium(),
+        Container(
+          padding: const EdgeInsets.all(15),
+          child: const Text('Tasks', style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold
+          ),),
+        ),
+          const Expanded(
+            child: Tasks(),
+          )
+        ],
       ),
     );
   }
