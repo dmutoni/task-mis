@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:task_mis_app/screens/home/home.dart';
+import 'package:task_mis_app/screens/learning/learning.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(statusBarColor: Colors.transparent)
-    );
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -22,4 +22,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
