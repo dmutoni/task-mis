@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'favorite_widget.dart';
+
 class Learning extends StatelessWidget {
   const Learning({Key? key}) : super(key: key);
   @override
@@ -72,11 +74,7 @@ Widget titleSection = Container(
           )
         ],
       )),
-      Icon(
-        Icons.star,
-        color: Colors.red[500],
-      ),
-      const Text('41'),
+      const FavoriteWidget(),
     ],
   ),
 );
