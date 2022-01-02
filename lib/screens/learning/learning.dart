@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task_mis_app/screens/learning/tap_box_a.dart';
 
 import 'favorite_widget.dart';
 
@@ -23,6 +24,7 @@ class Learning extends StatelessWidget {
           title: const Text('Flutter layout demo'),
         ),
         body: ListView(children: [
+
           Image.asset(
             'assets/images/lake.jpg',
             width: 600,
@@ -31,7 +33,10 @@ class Learning extends StatelessWidget {
           ),
           titleSection,
           buttonSection,
-          textSection
+          textSection,
+          const Center(
+            child: TapBoxA(),
+          ),
         ]),
       ),
     );
