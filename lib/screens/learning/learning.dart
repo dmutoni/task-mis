@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task_mis_app/screens/learning/parent_widget.dart';
 import 'package:task_mis_app/screens/learning/tap_box_a.dart';
 
 import 'favorite_widget.dart';
@@ -34,8 +35,12 @@ class Learning extends StatelessWidget {
           titleSection,
           buttonSection,
           textSection,
-          const Center(
-            child: TapBoxA(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              TapBoxA(),
+             ParentWidget()
+            ],
           ),
         ]),
       ),
