@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_mis_app/screens/home/widgets/go_premium.dart';
 import 'package:task_mis_app/screens/home/widgets/tasks.dart';
+import 'package:task_mis_app/screens/learning/learning.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: _buildAppBar(),
+        appBar: _buildAppBar(context),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -76,7 +77,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  AppBar _buildAppBar() {
+  AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
@@ -91,7 +92,16 @@ class HomePage extends StatelessWidget {
         const SizedBox(width: 10),
         const Text('Hi, Clenyse!',
             style: TextStyle(
-                color: Colors.black, fontSize: 26, fontWeight: FontWeight.bold))
+                color: Colors.black, fontSize: 26, fontWeight: FontWeight.bold)),
+        ElevatedButton(
+          child: Text('Open route'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Learning()),
+            );
+          },
+        ),
       ]),
       actions: const [Icon(Icons.more_vert, color: Colors.black, size: 40)],
     );

@@ -7,6 +7,7 @@ import 'favorite_widget.dart';
 
 class Learning extends StatelessWidget {
   const Learning({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
@@ -19,13 +20,17 @@ class Learning extends StatelessWidget {
       ],
     );
     return MaterialApp(
-      title: 'Flutter layout demo',
+      title: 'Flutter first demo',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter layout demo'),
+          leading: BackButton(
+              color: Colors.white,
+              onPressed: () => Navigator.of(context).pop(),
+          ),
+          title: const Text("Back button"),
+          centerTitle: true,
         ),
         body: ListView(children: [
-
           Image.asset(
             'assets/images/lake.jpg',
             width: 600,
@@ -37,10 +42,7 @@ class Learning extends StatelessWidget {
           textSection,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              TapBoxA(),
-             ParentWidget()
-            ],
+            children: const [TapBoxA(), ParentWidget()],
           ),
         ]),
       ),
